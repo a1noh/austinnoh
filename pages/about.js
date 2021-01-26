@@ -1,14 +1,13 @@
 import React from "react";
 import Header from "../components/shared/Header";
-
-class Index extends React.Component {
+class About extends React.Component {
   render() {
     return (
       <div>
         <Header />
-        <h1>I am index page!</h1>
+        <h1>I am index About!</h1>
       </div>
     );
   }
 }
-export default Index;
+export default About;
