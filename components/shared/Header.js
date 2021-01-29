@@ -8,7 +8,7 @@ class Header extends React.Component {
         <p className="customClass">I am style P element</p>
         <p className="customClassFromFile">I am style P element</p>
         <Link href="/">
-          <a style={{ "font-size": "20px" }}> Home </a>
+          <a style={{ fontSize: "20px" }}> Home </a>
         </Link>
         <Link href="/about">
           <a> About </a>
