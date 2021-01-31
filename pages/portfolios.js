@@ -15,6 +15,7 @@ class Portfolios extends React.Component {
     return { posts: posts.slice(0, 10) };
   }
   renderPosts(posts) {
+    //
     return posts.map((post) => (
       <li style={{ fontSize: "20px" }} key={post.id}>
         <Link as={`/portfolios/${post.id}`} href={`/portfolios/[id]`}>
