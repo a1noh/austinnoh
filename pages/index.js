@@ -2,17 +2,17 @@ import React from "react";
 import BaseLayout from "../components/layouts/BaseLayout";
 import { Container, Row, Col } from "reactstrap";
 import Typed from "react-typed";
+import Particle from "../components/shared/Particles";
 
 const ROLES = ["Software Engineer", "Psych Student", "CS Student"];
 class Index extends React.Component {
   render() {
     return (
       <BaseLayout className="cover">
+        <div className="background-image">
+          <Particle></Particle>
+        </div>
         <div className="main-section">
-          <div className="background-image">
-            <img src="/images/background-index.png" />
-          </div>
-
           <Container>
             <Row>
               <Col md="6">
@@ -33,7 +33,7 @@ class Index extends React.Component {
                   </div>
                 </div>
               </Col>
-              <Col md="6" className="hero-welcome-wrapper">
+              <div>
                 <div className="hero-welcome-text">
                   <h1>Hello, I am</h1>
                 </div>
@@ -51,7 +51,7 @@ class Index extends React.Component {
                 <div className="hero-welcome-bio">
                   <h1>AUSTIN NOH</h1>
                 </div>
-              </Col>
+              </div>
             </Row>
           </Container>
         </div>
