@@ -55,7 +55,7 @@ class Particle extends React.Component {
               enable: true,
               outMode: "bounce",
               random: false,
-              speed: 3,
+              speed: 2,
               straight: false,
             },
             number: {
@@ -63,7 +63,7 @@ class Particle extends React.Component {
                 enable: true,
                 value_area: 800,
               },
-              value: 40,
+              value: 30,
             },
             opacity: {
               value: 0.5,
