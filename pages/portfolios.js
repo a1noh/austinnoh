@@ -3,6 +3,7 @@ import BaseLayout from "../components/layouts/BaseLayout";
 import axios from "axios";
 // import Link from "next/Link";
 import { Link } from "../routes";
+import BasePage from "../components/BasePage";
 
 class Portfolios extends React.Component {
   static async getInitialProps() {
@@ -29,8 +30,10 @@ class Portfolios extends React.Component {
     const { posts } = this.props;
     return (
       <BaseLayout>
-        <h1>I am port Port!</h1>
-        <ul>{this.renderPosts(posts)}</ul>
+        <BasePage>
+          <h1>I am port Port!</h1>
+          <ul>{this.renderPosts(posts)}</ul>
+        </BasePage>
       </BaseLayout>
     );
   }
