@@ -20,7 +20,7 @@ const BsNavLink = (props) => {
 
 const BsNavBrand = () => (
   <Link href="/">
-    <a className="navbar-brand port-navbar-brand">Austin Noh</a>
+    <a className="navbar-brand port-navbar-brand">Austin</a>
   </Link>
 );
 
@@ -31,6 +31,7 @@ const Header = () => {
   return (
     <div>
       <Navbar className="port-navbar port-default absolute" dark expand="md">
+        <BsNavBrand />
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
