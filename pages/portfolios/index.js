@@ -1,6 +1,5 @@
 import BaseLayout from "../../components/layouts/BaseLayout";
 import BasePage from "../../components/BasePage";
-// import Link from 'next/link';
 import Link from "next/link";
 import axios from "axios";
 
