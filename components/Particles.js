@@ -10,10 +10,6 @@ class Particle extends React.Component {
           interactivity: {
             detectsOn: "canvas",
             events: {
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
               onHover: {
                 enable: true,
                 mode: "repulse",
@@ -22,7 +18,7 @@ class Particle extends React.Component {
             },
             modes: {
               bubble: {
-                distance: 400,
+                distance: 350,
                 duration: 2,
                 opacity: 0.8,
                 size: 40,
@@ -31,7 +27,7 @@ class Particle extends React.Component {
                 quantity: 4,
               },
               repulse: {
-                distance: 200,
+                distance: 160,
                 duration: 0.4,
               },
             },
@@ -42,7 +38,7 @@ class Particle extends React.Component {
             },
             links: {
               color: "#ffffff",
-              distance: 150,
+              distance: 160,
               enable: true,
               opacity: 0.5,
               width: 1,
@@ -61,9 +57,9 @@ class Particle extends React.Component {
             number: {
               density: {
                 enable: true,
-                value_area: 800,
+                value_area: 650,
               },
-              value: 30,
+              value: 26,
             },
             opacity: {
               value: 0.5,
@@ -76,7 +72,7 @@ class Particle extends React.Component {
               value: 5,
             },
           },
-          detectRetina: true,
+          detectRetina: false,
         }}
       />
     );

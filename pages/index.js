@@ -1,15 +1,16 @@
-import BaseLayout from "../components/layouts/BaseLayout";
+import BaseLayout from "@/components/layouts/BaseLayout";
 import { Container, Row, Col } from "reactstrap";
 import Typed from "react-typed";
-import Particle from "../components/shared/Particles";
-import BasePage from "../components/BasePage";
+import Particle from "@/components/Particles";
+import BasePage from "@/components/BasePage";
+import Socialmedia from "@/components/SocialMedia";
 
 const ROLES = ["Software Engineer", "Psych Student", "CS Student"];
 const Index = () => {
   return (
     <BaseLayout className="cover">
       <div className="background-image">
-        <Particle></Particle>
+        <Particle />
       </div>
       <div className="main-section">
         <Container>
@@ -35,6 +36,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
+            <Socialmedia />
           </Row>
         </Container>
       </div>
