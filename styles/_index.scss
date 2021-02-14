@@ -45,6 +45,7 @@
 .social-container {
   position: relative;
   margin: auto;
+  z-index: 9998;
 
   top: 270px;
 }
@@ -87,6 +88,7 @@ a.social:hover {
   }
   .social-container {
     top: 33vh;
+    position: relative;
   }
   .background-image {
     position: absolute;
