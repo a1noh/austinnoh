@@ -14,7 +14,7 @@ const Index = () => {
       </div>
       <div className="main-section">
         <Container>
-          <Row className="align-row-center">
+          <Row>
             <div className="hero-welcome-wrapper">
               <div className="hero-welcome-align-left">
                 <div className="hero-welcome-text">
