@@ -4,11 +4,14 @@ import Typed from "react-typed";
 import Particle from "@/components/Particles";
 import BasePage from "@/components/BasePage";
 import Socialmedia from "@/components/SocialMedia";
+import { useGetUser } from "@/actions/user";
 
 const ROLES = ["Software Engineer", "Psych Student", "CS Student"];
 const Index = () => {
+  const { data, error, loading } = useGetUser();
+
   return (
-    <BaseLayout className="cover">
+    <BaseLayout user={data} loading={loading} className="cover">
       <div className="background-image">
         <Particle />
       </div>

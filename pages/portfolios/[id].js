@@ -3,13 +3,14 @@ import BasePage from "@/components/BasePage";
 import { useGetData } from "@/actions";
 import { useRouter } from "next/router";
 import { useGetPosts, useGetPostById } from "@/actions";
+import { useGetUser } from "@/actions/user";
 
 const Portfolio = () => {
   const router = useRouter();
   const { data: portfolio, error, loading } = useGetPostById(router.query.id);
-
+  const { data: dataU, loading: loadingU } = useGetUser();
   return (
-    <BaseLayout>
+    <BaseLayout user={dataU} loading={loadingU}>
       <BasePage>
         {loading && <p>Loading Data...</p>}
         {error && <div className="alert alert-danger">{error.message}</div>}
