@@ -27,7 +27,9 @@ const LoginLink = () => (
   </a>
 );
 const LogoutLink = () => (
-  <span className="nav-link port-navbar-link clickable">Logout</span>
+  <a className="nav-link port-navbar-link" href="/api/v1/logout">
+    Logout
+  </a>
 );
 
 const Header = ({ user, loading }) => {
@@ -55,6 +57,9 @@ const Header = ({ user, loading }) => {
             </NavItem>
             <NavItem className="port-navbar-item">
               <BsNavLink href="/cv" title="Cv" />
+            </NavItem>
+            <NavItem className="port-navbar-item">
+              <BsNavLink href="/secret" title="Secret" />
             </NavItem>
           </Nav>
           <Nav navbar>
