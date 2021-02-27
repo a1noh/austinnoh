@@ -8,9 +8,14 @@ const auth0 = initAuth0({
   redirectUri: process.env.AUTH0_REDIRECT_URI,
   postLogoutRedirectUri: process.env.AUTH0_POST_LOGOUT_REDIRECT_URI,
   session: {
-    cookieSecret: process.env.AUTH0_0_COOKIE_SECRET,
+    cookieSecret: process.env.AUTH0_COOKIE_SECRET,
   },
 });
+
+export const isAuthorized = (user, role) => {
+  debugger;
+  return user && user[process.env.AUTH0_NAMESPACE + "/roles"].includes(role);
+};
 
 export default auth0;
 
@@ -27,9 +32,13 @@ export const authorizeUser = async (req, res) => {
   return session.user;
 };
 
-export const withAuth = (getData) => async ({ req, res }) => {
+export const withAuth = (getData) => (role) => async ({ req, res }) => {
   const session = await auth0.getSession(req);
-  if (!session || !session.user) {
+  if (
+    !session ||
+    !session.user ||
+    (role && !isAuthorized(session.user, role))
+  ) {
     res.writeHead(302, {
       Location: "/api/v1/login",
     });
