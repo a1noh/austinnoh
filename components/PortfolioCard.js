@@ -2,9 +2,7 @@ import { Card, CardHeader, CardBody, CardText, CardTitle } from "reactstrap";
 
 const PortfolioCard = ({ portfolio }) => (
   <Card className="portfolio-card">
-    <CardHeader className="portfolio-card-header">
-      {portfolio.jobTitle}
-    </CardHeader>
+    <CardHeader className="portfolio-card-header">{portfolio.role}</CardHeader>
     <CardBody>
       <p className="portfolio-card-city">{portfolio.location}</p>
       <CardTitle className="portfolio-card-title">{portfolio.title}</CardTitle>

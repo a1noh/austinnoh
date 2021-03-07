@@ -11,7 +11,12 @@ const Index = () => {
   const { data, error, loading } = useGetUser();
 
   return (
-    <BaseLayout user={data} loading={loading} className="cover">
+    <BaseLayout
+      user={data}
+      navClass="transparent"
+      loading={loading}
+      className="cover"
+    >
       <div className="background-image">
         <Particle />
       </div>

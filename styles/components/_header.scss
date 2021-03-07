@@ -5,6 +5,10 @@
   z-index: 15;
   padding: 40px;
 
+  &.with-bg {
+    padding: 30px;
+  }
+
   .port-navbar {
     &-brand {
       font-size: 24px;
