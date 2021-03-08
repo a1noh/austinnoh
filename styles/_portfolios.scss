@@ -4,7 +4,7 @@
   // background-color: white;
 
   .portfolio-card {
-    background-image: linear-gradient(45deg, #4a4a45 0%, #8f8f8b 100%);
+    background-image: linear-gradient(60deg, #000000 0%, #171717 100%);
     border: none;
     color: white;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
@@ -14,6 +14,7 @@
       cursor: pointer;
       transform: translateY(-5px);
     }
+
 
     &:hover .readMore:before {
       background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
@@ -29,6 +30,7 @@
     }
 
     &-title {
+      color: rgb(222, 203, 4) !important;
       font-size: 30px;
       font-weight: 700;
       line-height: 1.1;
