@@ -17,10 +17,11 @@ const Index = () => {
       loading={loading}
       className="cover"
     >
+    <div className="main-section">
       <div className="background-image">
         <Particle />
       </div>
-      <div className="main-section">
+      
         <Container>
           <Row>
             <div className="hero-welcome-wrapper">
