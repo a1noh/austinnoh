@@ -3,6 +3,8 @@
 // Components
 @import "./components/header";
 @import "./portfolios";
+@import "./components/portfolioforms";
+
 html,
 body {
   height: 100%;
@@ -16,7 +18,7 @@ body {
 }
 
 .base-page {
-  padding-top: 150px;
+  padding: 150px 0;
   color: white;
   background-color: rgb(26, 26, 26);
   min-height: 100vh;
