@@ -1,8 +1,22 @@
-import { useForm } from "react-hook-form";
 import DatePicker from "react-datepicker";
+import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
 
 const PortfolioForm = ({ onSubmit }) => {
-  const { register, handleSubmit } = useForm();
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const { register, handleSubmit, setValue } = useForm();
+
+  useEffect(() => {
+    register({ name: "startDate" });
+    register({ name: "endDate" });
+  }, [register]);
+
+  const handleDateChange = (dateType, setDate) => (date) => {
+    setValue(dateType, date);
+    setDate(date);
+  };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="form-group port-forms">
@@ -19,6 +33,7 @@ const PortfolioForm = ({ onSubmit }) => {
       <div className="form-group port-forms">
         <label htmlFor="city">Company</label>
         <input
+          ref={register}
           name="company"
           type="text"
           className="form-control port-input"
@@ -62,6 +77,7 @@ const PortfolioForm = ({ onSubmit }) => {
       <div className="form-group port-forms">
         <label htmlFor="description">Description</label>
         <textarea
+          ref={register}
           name="description"
           rows="5"
           type="text"
@@ -71,25 +87,27 @@ const PortfolioForm = ({ onSubmit }) => {
       </div>
 
       <div className="form-group port-forms">
-        <label htmlFor="StartDate">Start Date</label>
-        <div>{/* Date picker here */}</div>
-        <DatePicker
-          showYearDropdown
-          selected={new Date()}
-          className="form-control port-input"
-          onChange={() => {}}
-        />
+        <label htmlFor="startDate">Start Date</label>
+        <div>
+          <DatePicker
+            showYearDropdown
+            className="form-control port-input"
+            selected={startDate}
+            onChange={handleDateChange("startDate", setStartDate)}
+          />
+        </div>
       </div>
 
       <div className="form-group port-forms">
         <label htmlFor="endDate">End Date</label>
-        <div>{/* Date picker here */}</div>
-        <DatePicker
-          showYearDropdown
-          selected={new Date()}
-          className="form-control port-input"
-          onChange={() => {}}
-        />
+        <div>
+          <DatePicker
+            showYearDropdown
+            className=" form-control port-input"
+            selected={endDate}
+            onChange={handleDateChange("endDate", setEndDate)}
+          />
+        </div>
       </div>
       <button type="submit" className="btn btn-primary">
         Create
@@ -97,4 +115,5 @@ const PortfolioForm = ({ onSubmit }) => {
     </form>
   );
 };
+
 export default PortfolioForm;
