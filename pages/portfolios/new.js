@@ -3,10 +3,10 @@ import BasePage from "@/components/BasePage";
 import withAuth from "@/hoc/withAuth";
 import { Row, Col } from "reactstrap";
 import PortfolioFrom from "@/components/PortfolioForm";
-
+import { createPortfolio } from "@/actions/portfolios";
 const PortfolioNew = ({ user, loading: userLoading }) => {
-  const createPortfolio = (data) => {
-    alert(JSON.stringify(data));
+  const _createPortfolio = (data) => {
+    createPortfolio(data);
   };
 
   return (
@@ -14,7 +14,7 @@ const PortfolioNew = ({ user, loading: userLoading }) => {
       <BasePage>
         <Row>
           <Col md="8">
-            <PortfolioFrom onSubmit={createPortfolio}></PortfolioFrom>
+            <PortfolioFrom onSubmit={_createPortfolio}></PortfolioFrom>
           </Col>
         </Row>
       </BasePage>
