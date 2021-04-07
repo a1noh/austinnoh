@@ -14,17 +14,23 @@ const Portfolios = ({ portfolios }) => {
     <BaseLayout user={dataU} loading={loadingU}>
       <BasePage header="Portfolios" className="portfolio-page">
         <Row>
-          {portfolios.map((portfolio) => (
-            <Col
-              key={portfolio._id}
-              onClick={() => {
-                router.push("/portfolios/[id]", `/portfolios/${portfolio._id}`);
-              }}
-              md="4"
-            >
-              <PortfolioCard portfolio={portfolio} />
-            </Col>
-          ))}
+          {portfolios
+            .slice(0)
+            .reverse()
+            .map((portfolio) => (
+              <Col
+                key={portfolio._id}
+                onClick={() => {
+                  router.push(
+                    "/portfolios/[id]",
+                    `/portfolios/${portfolio._id}`
+                  );
+                }}
+                md="4"
+              >
+                <PortfolioCard portfolio={portfolio} />
+              </Col>
+            ))}
         </Row>
       </BasePage>
     </BaseLayout>

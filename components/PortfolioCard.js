@@ -5,10 +5,10 @@ const PortfolioCard = ({ portfolio }) => (
     <CardHeader className="portfolio-card-header">{portfolio.role}</CardHeader>
     <CardBody>
       <p className="portfolio-card-city">{portfolio.location}</p>
-      <CardTitle className="portfolio-card-title hoverCarditle">{portfolio.title}</CardTitle>
-      <CardText className="portfolio-card-text">
-        {portfolio.description}
-      </CardText>
+      <CardTitle className="portfolio-card-title hoverCarditle">
+        {portfolio.company}
+      </CardTitle>
+      <CardText className="portfolio-card-text">{portfolio.title}</CardText>
     </CardBody>
   </Card>
 );
