@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  Nav,
+  NavItem,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
 
 const BsNavLink = (props) => {
-  const { href, title } = props;
+  const { href, title, className = "" } = props;
   return (
     <Link href={href}>
-      <a className="nav-link port-navbar-link">{title}</a>
+      <a className={`nav-link port-navbar-link ${className}`}>{title}</a>
     </Link>
   );
 };
@@ -29,6 +39,34 @@ const LogoutLink = () => (
   </a>
 );
 
+const AdminMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <Dropdown
+      className="port-dropdown-menu"
+      nav
+      isOpen={isOpen}
+      toggle={() => setIsOpen(!isOpen)}
+    >
+      <DropdownToggle
+        className="port-dropdown-toggle port-navbar-link"
+        nav
+        carret
+      >
+        Admin
+      </DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem>
+          <BsNavLink
+            className="port-dropdown-item"
+            href="/portfolios/new"
+            title="New Portfolio"
+          />
+        </DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+  );
+};
 const Header = ({ user, loading, className }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -76,9 +114,12 @@ const Header = ({ user, loading, className }) => {
             {!loading && (
               <>
                 {user && (
-                  <NavItem className="port-navbar-item">
-                    <LogoutLink />
-                  </NavItem>
+                  <>
+                    <AdminMenu />
+                    <NavItem className="port-navbar-item">
+                      <LogoutLink />
+                    </NavItem>
+                  </>
                 )}
                 {!user && (
                   <NavItem className="port-navbar-item">

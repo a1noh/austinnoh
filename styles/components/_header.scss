@@ -24,7 +24,7 @@
     }
 
     &-link {
-      color: white !important;
+      color: white;
       font-weight: bold;
       letter-spacing: 0.8px;
       font-size: 18px;
@@ -39,5 +39,30 @@
         color: rgb(222, 203, 4) !important;
       }
     }
+  }
+}
+
+.port-dropdown-menu {
+  .port-dropdown-item {
+    &.active {
+      color: rgb(222, 203, 4);
+    }
+  }
+
+  .port-dropdown-toggle {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.dropdown-menu {
+  background-color: rgb(38, 38, 38);
+}
+
+.dropdown-item {
+  &:hover,
+  &:focus {
+    background-color: rgb(38, 38, 38);
+    color: rgb(222, 203, 4) !important;
   }
 }
