@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { isAuthorized } from "@/utils/auth0";
 import {
   Collapse,
   Navbar,
@@ -51,16 +52,30 @@ const AdminMenu = () => {
       <DropdownToggle
         className="port-dropdown-toggle port-navbar-link"
         nav
-        carret
+        caret
       >
         Admin
       </DropdownToggle>
-      <DropdownMenu>
+      <DropdownMenu right>
         <DropdownItem>
           <BsNavLink
             className="port-dropdown-item"
             href="/portfolios/new"
             title="New Portfolio"
+          />
+        </DropdownItem>
+        <DropdownItem>
+          <BsNavLink
+            className="port-dropdown-item"
+            href="/blogs/editor"
+            title="Blog Editor"
+          />
+        </DropdownItem>
+        <DropdownItem>
+          <BsNavLink
+            className="port-dropdown-item"
+            href="/blogs/dashboard"
+            title="Dashboard"
           />
         </DropdownItem>
       </DropdownMenu>
