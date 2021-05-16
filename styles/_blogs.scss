@@ -167,11 +167,11 @@
 
       > li {
         font-size: 28px;
-        color: black;
+        color: white;
       }
 
       a {
-        color: #424242;
+        color: #ecedee;
       }
     }
 
@@ -180,7 +180,14 @@
     }
 
     .port-dropdown {
+      color: white !important;
       margin-left: 10px;
     }
+  }
+}
+.dropdown-item {
+  color: white;
+  &:hover {
+    color: rgb(218, 220, 113);
   }
 }
