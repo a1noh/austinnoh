@@ -4,12 +4,11 @@ import { useGetUser } from "@/actions/user";
 import Masthead from "@/components/shared/Masthead";
 import { Row, Col } from "reactstrap";
 import BlogItem from "@/components/BlogItem";
-import Link from "next/link";
 import BlogApi from "@/lib/api/blogs";
 
 const Blogs = ({ blogs }) => {
   const { data, loading } = useGetUser();
-  debugger;
+  // debugger;
   return (
     <BaseLayout
       navClass="transparent"
@@ -26,6 +25,7 @@ const Blogs = ({ blogs }) => {
           {blogs.map((blog) => (
             <Col key={blog._id} md="10" lg="8" className="mx-auto">
               <BlogItem blog={blog} />
+
               <hr></hr>
             </Col>
           ))}
