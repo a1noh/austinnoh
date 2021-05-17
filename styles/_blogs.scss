@@ -17,7 +17,7 @@
 
   .post-preview {
     > a {
-      color: #212529;
+      color: #c7dff9;
       &:focus,
       &:hover {
         text-decoration: none;
@@ -32,7 +32,7 @@
       > .post-subtitle {
         font-weight: 300;
         margin: 0 0 10px;
-        color: #565656;
+        color: #bfbfbf;
       }
     }
 
@@ -43,7 +43,7 @@
       color: #868e96;
       > a {
         text-decoration: none;
-        color: #212529;
+        color: #c4c4c4;
         &:focus,
         &:hover {
           text-decoration: underline;
