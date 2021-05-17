@@ -69,3 +69,11 @@
     color: rgb(222, 203, 4) !important;
   }
 }
+
+.port-navbar.transparent.is-open {
+  background-color: #black;
+}
+
+.port-navbar.transparent.is-close {
+  transition: 1s;
+}
