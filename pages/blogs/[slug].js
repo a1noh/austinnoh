@@ -13,7 +13,7 @@ const BlogDetail = ({ blog }) => {
     <BaseLayout user={data} loading={loading}>
       <BasePage className="slate-container">
         <Row>
-          <Col md={{ size: 8, offset: 2 }}>
+          <Col md={{ size: 9, offset: 1 }}>
             <SlateView initialContent={blog.content} />
           </Col>
         </Row>
