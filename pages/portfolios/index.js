@@ -28,7 +28,11 @@ const Portfolios = ({ portfolios: initialPortfolios }) => {
 
   return (
     <BaseLayout user={dataU} loading={loadingU}>
-      <BasePage header="Portfolios" className="portfolio-page">
+      <BasePage
+        title="Newest Portfolios - Austin Noh"
+        header="Portfolios"
+        className="portfolio-page"
+      >
         <Row>
           {portfolios
             .slice(0)

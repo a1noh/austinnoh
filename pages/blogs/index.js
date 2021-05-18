@@ -20,7 +20,7 @@ const Blogs = ({ blogs }) => {
         <h1>Fresh Blogs</h1>
         <span className="subheading">Programming, travelling...</span>
       </Masthead>
-      <BasePage className="blog-body">
+      <BasePage title="Newest Blogs - Austin Noh" className="blog-body">
         <Row>
           {blogs.map((blog) => (
             <Col key={blog._id} md="10" lg="8" className="mx-auto">
@@ -36,9 +36,10 @@ const Blogs = ({ blogs }) => {
 };
 
 export async function getStaticProps() {
-  const json = await new BlogApi().getAll();
+  const { data } = await new BlogApi().getAll();
+  const blogs = data.map((item) => ({ ...item.blog, author: item.author }));
   return {
-    props: { blogs: json.data },
+    props: { blogs },
     revalidate: 60,
   };
 }
