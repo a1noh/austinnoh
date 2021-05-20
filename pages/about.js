@@ -36,7 +36,7 @@ const About = () => {
           </Col>
           <Col md="6">
             <div className={`content fadein`}>
-              <p>My name is Austin NOh and I am from Purdue. </p>
+              <p>My name is Austin Noh and I am from Purdue. </p>
               <p>I love programming. That's all I can say.</p>
               <p>
                 I am a student at Purdue University looking for a New grad
