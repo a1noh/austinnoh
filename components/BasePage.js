@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 const BasePage = (props) => {
   const router = useRouter();
-  debugger;
+
   const {
     indexPage,
     className = "",
@@ -12,6 +12,7 @@ const BasePage = (props) => {
     title = "Portfolio - Austin Noh",
     metaDescription = "My name is Austin Noh. I am studying Computer Science at Purdue Unviersity",
     children,
+    canonicalPath,
   } = props;
 
   const pageType = indexPage ? "index-page" : "base-page";
@@ -28,6 +29,12 @@ const BasePage = (props) => {
           property="og:url"
           key="og:url"
           content={`${process.env.BASE_URL}${router.asPath}`}
+        />
+        <link
+          rel="canonical"
+          href={`${process.env.BASE_URL}${
+            canonicalPath ? canonicalPath : router.asPath
+          }`}
         />
         <meta property="og:type" key="og:type" content="website" />
         <meta
