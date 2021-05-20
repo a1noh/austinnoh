@@ -1,21 +1,29 @@
+import React from "react";
 import { Container } from "reactstrap";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
+const PageHeader = ({ header }) => (
+  <div className="page-header">
+    <h1 className="page-header-title">{header}</h1>
+  </div>
+);
+
 const BasePage = (props) => {
   const router = useRouter();
-
   const {
+    noWrapper,
     indexPage,
     className = "",
     header,
     title = "Portfolio - Austin Noh",
-    metaDescription = "My name is Austin Noh. I am studying Computer Science at Purdue Unviersity",
-    children,
+    metaDescription = "My name is Austin Noh and I am a Computer Science student at Purdue University",
     canonicalPath,
+    children,
   } = props;
 
   const pageType = indexPage ? "index-page" : "base-page";
+  const Wrapper = noWrapper ? React.Fragment : Container;
   return (
     <>
       <Head>
@@ -29,12 +37,6 @@ const BasePage = (props) => {
           property="og:url"
           key="og:url"
           content={`${process.env.BASE_URL}${router.asPath}`}
-        />
-        <link
-          rel="canonical"
-          href={`${process.env.BASE_URL}${
-            canonicalPath ? canonicalPath : router.asPath
-          }`}
         />
         <meta property="og:type" key="og:type" content="website" />
         <meta
@@ -51,17 +53,19 @@ const BasePage = (props) => {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         ></link>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+        <link
+          rel="canonical"
+          href={`${process.env.BASE_URL}${
+            canonicalPath ? canonicalPath : router.asPath
+          }`}
+        />
       </Head>
       <div className={`${pageType} ${className}`}>
-        <Container>
-          {header && (
-            <div className="page-header">
-              <h1 className="page-header-title">{header}</h1>
-            </div>
-          )}
+        <Wrapper>
+          {header && <PageHeader header={header} />}
           {children}
-        </Container>
+        </Wrapper>
       </div>
     </>
   );
