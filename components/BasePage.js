@@ -47,6 +47,11 @@ const BasePage = (props) => {
           key="og:image"
           content={`${process.env.BASE_URL}/images/section-1.png`}
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <div className={`${pageType} ${className}`}>
         <Container>
