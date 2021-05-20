@@ -37,18 +37,10 @@ const About = () => {
           <Col md="6">
             <div className={`content fadein`}>
               <p>My name is Austin NOh and I am from Purdue. </p>
+              <p>I love programming. That's all I can say.</p>
               <p>
-                I am studying computer science.I am studying computer science.I
-                am studying computer science.I am studying computer science. I
-                am studying computer science.I am studying computer science.I am
-                studying computer science.I am studying computer science. I am
-                studying computer science.I am studying computer science.
-              </p>
-              <p>
-                I am studying computer science.I am studying computer science.I
-                am studying computer science.I am studying computer science. I
-                am studying computer science.I am studying computer science.I am
-                studying computer science.I am studying computer science.
+                I am a student at Purdue University looking for a New grad
+                position in software engineering.
               </p>
             </div>
           </Col>
