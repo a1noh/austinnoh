@@ -53,13 +53,14 @@ const BasePage = (props) => {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         ></link>
-        <link rel="shortcut icon" href="/images/favicon.ico" />
+
         <link
           rel="canonical"
           href={`${process.env.BASE_URL}${
             canonicalPath ? canonicalPath : router.asPath
           }`}
         />
+        <link rel="icon" href="/images/favicon.ico" />
       </Head>
       <div className={`${pageType} ${className}`}>
         <Wrapper>

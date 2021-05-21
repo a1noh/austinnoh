@@ -28,19 +28,44 @@ const About = () => {
           <Col md="6">
             <div className="left-side">
               <h1 className={`title fadein`}>Hello, Welcome</h1>
-              <h4 className={`subtitle fadein`}>To About Page</h4>
+              <h4 className={`subtitle fadein`}>My name is Austin</h4>
               <p className={`subsubTitle fadein`}>
-                Feel free to read short description about me.
+                I am currently a senior at Purdue University. I wil be
+                graduating in Decemeber 2021.
               </p>
             </div>
           </Col>
           <Col md="6">
             <div className={`content fadein`}>
-              <p>My name is Austin Noh and I am from Purdue. </p>
-              <p>I love programming. That's all I can say.</p>
+              <p>
+                It took me a long way to get here. Here's a little bit about
+                myself{" "}
+              </p>
+              <p>
+                When we decide on our majors in college, how do we really know
+                what we want to do for the rest of our lives at age 19? I
+                started my journey as a psychology major at Purdue University. I
+                spent some time working at the National Human Rights Commission
+                of Korea working in different sectors. Ironically, my experience
+                there helped me realize psychology may not be for me. I realized
+                I wanted to develop a hard skill and I said 'why not
+                programming?' Now, I'm a senior at Purdue University expected to
+                graduate with a Computer Science degree in December 2021. It was
+                definitely not an easy trip getting here and it's only the
+                beginning.{" "}
+              </p>
               <p>
                 I am a student at Purdue University looking for a New grad
-                position in software engineering.
+                position in software engineering. I have previous internship
+                experience at Kroger as a Software Developer Intern. I worked on
+                the team that was migrating Kroger's services to Kubernetes. I
+                familiarized myself with CI/CD and agile development
+                environments. I also will have experience as a Software
+                Developer Intern at Walmart Global Tech this summer. I will be
+                working on the Health and Wellness team creating platforms for
+                Walmart's services such as vaccine distribution. I will be
+                working with React/Springboot stack gaining experience as a
+                full-stack developer!
               </p>
             </div>
           </Col>
