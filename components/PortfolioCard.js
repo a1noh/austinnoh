@@ -8,9 +8,7 @@ const PortfolioCard = ({ portfolio, children }) => (
     <CardBody>
       <p className="portfolio-card-city">{portfolio.location}</p>
       <CardTitle className="portfolio-card-title">{portfolio.title}</CardTitle>
-      <CardText className="portfolio-card-text">
-        {portfolio.description}
-      </CardText>
+      <CardText className="portfolio-card-text">{portfolio.jobTitle}</CardText>
       {children}
     </CardBody>
   </Card>
