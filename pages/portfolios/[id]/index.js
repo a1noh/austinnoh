@@ -40,7 +40,7 @@ const Portfolio = ({ portfolio }) => {
                   <p className="lead">{portfolio.description}</p>
                   <p className="lead">
                     <a
-                      href={"//" + portfolio.companyWebsite}
+                      href={portfolio.companyWebsite}
                       target="_blank"
                       className="btn btn-lg btn-secondary"
                     >
