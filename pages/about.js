@@ -30,17 +30,14 @@ const About = () => {
               <h1 className={`title fadein`}>Hello, Welcome</h1>
               <h4 className={`subtitle fadein`}>My name is Austin</h4>
               <p className={`subsubTitle fadein`}>
-                I am currently a senior at Purdue University. I wil be
+                I am currently a senior at Purdue University. I will be
                 graduating in Decemeber 2021.
               </p>
             </div>
           </Col>
           <Col md="6">
             <div className={`content fadein`}>
-              <p>
-                It took me a long way to get here. Here's a little bit about
-                myself{" "}
-              </p>
+              <p>Here is a short introduction about myself. </p>
               <p>
                 When we decide on our majors in college, how do we really know
                 what we want to do for the rest of our lives at age 19? I
